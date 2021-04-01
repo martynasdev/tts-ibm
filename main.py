@@ -1,4 +1,4 @@
-import jsonG
+import json
 import re
 import random
 import docx
@@ -10,7 +10,7 @@ from functions import *
 from default_data import *
 
 # Dictionaries
-parsed_dict = {}g
+parsed_dict = {}
 
 # Lists
 list_of_lang_dict = []
@@ -58,7 +58,7 @@ with open('voices.txt') as json_file:
 
 # Obtain user criteria for text conversion
 user_selection.append(selectLanguage(list_of_lang_dict))
-user_selection.append(getGender(int(enterGender())))
+user_selection.append(enterGender())
 # Check if any 'random' language or gender was selected
 randomness = checkRandomness(user_selection)
 
