@@ -51,7 +51,12 @@ def enterGender():
     '1 - Male\n'+ \
     '2 - Female\n'+ \
     'Enter the number of preferred gender: '
-
+    
+    switch = {
+        0: 'random',
+        1: 'male',
+        2: 'female'
+    }
     while True:
         try:
             # print(gender_term_text)
@@ -65,15 +70,8 @@ def enterGender():
         except Exception as error:
             print(error)
 
-    return user_input
+    return switch.get(int(user_input))
 
-def getGender(i):
-    switch = {
-        0: 'random',
-        1: 'male',
-        2: 'female'
-    }
-    return switch.get(i, "Invalid gender")
 
 
 
